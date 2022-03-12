@@ -13,5 +13,9 @@ function _getData() {
 }
 
 _getData().then(x => {
-    console.log(x); // x will be undefined if there are no rows.
+    console.log(x); // x will be an empty array if no rows.
+
+    if (x.length <= 0) {
+        console.log("empty")
+    } 
 })
